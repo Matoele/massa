@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>製品 - Massa</title>
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="https://img.icons8.com/fluency/48/brewery.png" type="image/png">
+    <meta name="description" content="Massaの製品ラインナップをご覧ください。クラフトビール醸造システム、コールドブリューコーヒー装置、冷水抽出システムなどをご提供しています。">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>MASSA</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">ホーム</a></li>
+                    <li><a href="about.html">会社概要</a></li>
+                    <li><a href="products.html" class="active">製品</a></li>
+                    <li><a href="process.html">プロセス</a></li>
+                    <li><a href="contact.html">お問い合わせ</a></li>
+                    <li class="language-selector">
+                        <a href="#"><i class="fas fa-globe"></i> JP <i class="fas fa-chevron-down"></i></a>
+                        <ul class="language-dropdown">
+                            <li><a href="../../index.html" data-lang="en">English</a></li>
+                            <li><a href="../ja/index.html" data-lang="ja">日本語</a></li>
+                            <li><a href="../ko/index.html" data-lang="ko">한국어</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>製品ラインナップ</h1>
+            <p>商業用途向けのプロフェッショナル装置</p>
+        </div>
+    </section>
+
+    <section class="products-page">
+        <div class="container">
+            <div class="product-categories-tabs">
+                <div class="tabs">
+                    <button class="tab-button active" data-category="all">全製品</button>
+                    <button class="tab-button" data-category="beer">クラフトビール装置</button>
+                    <button class="tab-button" data-category="coffee">コールドブリューコーヒー</button>
+                    <button class="tab-button" data-category="extraction">水抽出システム</button>
+                </div>
+            </div>
+
+            <div class="product-grid" id="productGrid">
+                <!-- クラフトビール装置 -->
+                <div class="product-item" data-category="beer">
+                    <div class="product-image">
+                        <img src="../../images/products/microbrewery-system.jpg" alt="マイクロブルワリーシステム">
+                    </div>
+                    <div class="product-details">
+                        <h3>マイクロブルワリーシステム</h3>
+                        <p class="product-specs">容量: 3HL〜10HL</p>
+                        <p>小規模から中規模のクラフトブルワリー向けの完全なターンキーシステム。マッシュタン、ラウタータン、ケトル、ワールプール、制御システムを含みます。</p>
+                        <a href="#" class="btn-sm product-detail-btn" data-product="microbrewery">詳細を見る</a>
+                        <div class="product-detail-content" id="microbrewery-detail">
+                            <h4>マイクロブルワリーシステム仕様</h4>
+                            <ul>
+                                <li><strong>素材:</strong> 304食品グレードステンレス鋼</li>
+                                <li><strong>加熱方式:</strong> オイル加熱、蒸気加熱、または電気加熱オプションあり</li>
+                                <li><strong>制御システム:</strong> タッチスクリーンインターフェース付きPLC自動制御</li>
+                                <li><strong>容量オプション:</strong> 3HL、5HL、7HL、10HL</li>
+                                <li><strong>主な特徴:</strong>
+                                    <ul>
+                                        <li>エネルギー効率の高い熱油加熱システム</li>
+                                        <li>統合CIP（定置洗浄）システム</li>
+                                        <li>デジタル温度・圧力モニタリング</li>
+                                        <li>レシピ管理ソフトウェア</li>
+                                        <li>カスタマイズ可能な醸造パラメータ</li>
+                                    </ul>
+                                </li>
+                                <li><strong>設置:</strong> プロフェッショナルな設置とトレーニングを含む</li>
+                                <li><strong>保証:</strong> 2年間のメーカー保証</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-item" data-category="beer">
+                    <div class="product-image">
+                        <img src="../../images/products/commercial-brewing-system.jpg" alt="商業用醸造システム">
+                    </div>
+                    <div class="product-details">
+                        <h3>商業用醸造システム</h3>
+                        <p class="product-specs">容量: 15HL〜50HL</p>
+                        <p>商業生産向けの大容量醸造システム。高度な自動化、エネルギー回収システム、カスタマイズ可能な構成を特徴としています。</p>
+                        <a href="#" class="btn-sm product-detail-btn" data-product="commercial-brewing">詳細を見る</a>
+                        <div class="product-detail-content" id="commercial-brewing-detail">
+                            <h4>商業用醸造システム仕様</h4>
+                            <ul>
+                                <li><strong>素材:</strong> 304/316L食品グレードステンレス鋼</li>
+                                <li><strong>加熱方式:</strong> エネルギー回収システム付きオイル加熱醸造所</li>
+                                <li><strong>制御システム:</strong> リモートモニタリング機能付き高度なPLC自動化</li>
+                                <li><strong>容量オプション:</strong> 15HL、20HL、30HL、50HL</li>
+                                <li><strong>主な特徴:</strong>
+                                    <ul>
+                                        <li>30%のエネルギー節約を実現する特許取得済み熱油加熱技術</li>
+                                        <li>完全自動化された醸造プロセス</li>
+                                        <li>蒸気回収と水リサイクルシステム</li>
+                                        <li>統合された穀物処理システム</li>
+                                        <li>先進的な麦汁冷却技術</li>
+                                        <li>特定の醸造所要件にカスタマイズ可能</li>
+                                    </ul>
+                                </li>
+                                <li><strong>設置:</strong> 包括的な設置、セットアップ、スタッフトレーニングを含む</li>
+                                <li><strong>保証:</strong> サービスパッケージオプション付き3年間のメーカー保証</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-item" data-category="beer">
+                    <div class="product-image">
+                        <img src="../../images/products/fermentation-tanks.jpg" alt="発酵タンク">
+                    </div>
+                    <div class="product-details">
+                        <h3>発酵・調整タンク</h3>
+                        <p class="product-specs">容量: 5HL〜100HL</p>
+                        <p>正確な温度制御、圧力逃し弁、サンプリングポートを備えたジャケット付きステンレス製の発酵・調整タンク。</p>
+                        <a href="#" class="btn-sm product-detail-btn" data-product="fermentation">詳細を見る</a>
+                        <div class="product-detail-content" id="fermentation-detail">
+                            <h4>発酵・調整タンク仕様</h4>
+                            <ul>
+                                <li><strong>素材:</strong> 研磨された内部を持つ304食品グレードステンレス鋼</li>
+                                <li><strong>冷却システム:</strong> 正確な温度制御を備えたグリコールジャケット</li>
+                                <li><strong>圧力定格:</strong> 3バーの作動圧力</li>
+                                <li><strong>容量オプション:</strong> 5HL、10HL、20HL、30HL、50HL、100HL</li>
+                                <li><strong>主な特徴:</strong>
+                                    <ul>
+                                        <li>効率的な温度制御のためのディンプル冷却ジャケット</li>
+                                        <li>デジタル温度監視・制御システム</li>
+                                        <li>徹底的な洗浄のためのCIPスプレーボール</li>
+                                        <li>異なる高さの複数のサンプリングポート</li>
+                                        <li>調整可能な圧力逃し弁</li>
+                                        <li>カスタマイズ可能な継手とアクセサリー</li>
+                                    </ul>
+                                </li>
+                                <li><strong>オプション:</strong> ユニタンク設計または専用発酵/調整タンク</li>
+                                <li><strong>保証:</strong> タンク構造に5年間、コンポーネントに2年間の保証</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-item" data-category="beer">
+                    <div class="product-image">
+                        <img src="../../images/products/brewing-control-system.jpg" alt="醸造制御システム">
+                    </div>
+                    <div class="product-details">
+                        <h3>醸造制御システム</h3>
+                        <p class="product-specs">すべての醸造システムに対応</p>
+                        <p>タッチスクリーンインターフェース、自動レシピ管理、データロギング、リモートモニタリング機能を備えた高度な制御システム。</p>
+                        <a href="#" class="btn-sm product-detail-btn" data-product="control-system">詳細を見る</a>
+                        <div class="product-detail-content" id="control-system-detail">
+                            <h4>醸造制御システム仕様</h4>
+                            <ul>
+                                <li><strong>コントローラー:</strong> 冗長性オプションを備えた産業グレードPLC</li>
+                                <li><strong>インターフェース:</strong> 直感的なグラフィカルインターフェースを備えた15インチタッチスクリーンHMI</li>
+                                <li><strong>ソフトウェア:</strong> レシピデータベース付き独自の醸造管理ソフトウェア</li>
+                                <li><strong>接続性:</strong> イーサネット、Wi-Fi、オプションのセルラーバックアップ</li>
+                                <li><strong>主な特徴:</strong>
+                                    <ul>
+                                        <li>リアルタイムのプロセス可視化と制御</li>
+                                        <li>ステップバイステップのガイダンス付き自動レシピ実行</li>
+                                        <li>包括的なデータロギングとレポート</li>
+                                        <li>モバイルアプリを介したリモート監視と制御</li>
+                                        <li>アラーム管理と通知システム</li>
+                                        <li>醸造所管理ソフトウェアとの統合</li>
+                                    </ul>
+                                </li>
+                                <li><strong>互換性:</strong> 既存の醸造システムに後付け可能</li>
+                                <li><strong>保証:</strong> ソフトウェアアップデートサブスクリプション付き2年間の保証</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- コールドブリューコーヒー装置 -->
+                <div class="product-item" data-category="coffee">
+                    <div class="product-image">
+                        <img src="../../images/products/batch-cold-brew-system.jpg" alt="バッチ式コールドブリューシステム">
+                    </div>
+                    <div class="product-details">
+                        <h3>バッチ式コールドブリューシステム</h3>
+                        <p class="product-specs">容量: 50L〜200L</p>
+                        <p>バッチ式コールドブリュー生産のための完全なシステム。ステンレス製の醸造容器、濾過システム、温度管理機能を備えています。</p>
+                        <a href="#" class="btn-sm product-detail-btn" data-product="batch-cold-brew">詳細を見る</a>
+                        <div class="product-detail-content" id="batch-cold-brew-detail">
+                            <h4>バッチ式コールドブリューシステム仕様</h4>
+                            <ul>
+                                <li><strong>素材:</strong> 304食品グレードステンレス鋼</li>
+                                <li><strong>温度制御:</strong> デジタルコントローラー付き精密冷却システム</li>
+                                <li><strong>濾過:</strong> 交換可能な要素を持つ多段階濾過システム</li>
+                                <li><strong>容量オプション:</strong> 50L、100L、150L、200L</li>
+                                <li><strong>主な特徴:</strong>
+                                    <ul>
+                                        <li>酸素のない抽出環境</li>
+                                        <li>最適な抽出のための穏やかな攪拌システム</li>
+                                        <li>プログラム可能な抽出時間と温度</li>
+                                        <li>複数のフィルターオプションを備えた統合濾過</li>
+                                        <li>CIP機能を備えた清掃しやすい設計</li>
+                                    </ul>
+                                </li>
+                                <li><strong>生産時間:</strong> 12〜24時間の抽出サイクル</li>
+                                <li><strong>保証:</strong> 2年間のメーカー保証</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-item" data-category="coffee">
+                    <div class="product-image">
+                        <img src="../../images/products/commercial-cold-brew-tower.jpg" alt="商業用コールドブリュータワー">
+                    </div>
+                    <div class="product-details">
+                        <h3>商業用コールドブリュータワー</h3>
+                        <p class="product-specs">容量: 100L〜500L</p>
+                        <p>大量生産向けの多段式コールドブリュータワーシステム。制御された滴下速度、複数の抽出チャンバー、収集タンクを備えています。</p>
+                        <a href="#" class="btn-sm product-detail-btn" data-product="cold-brew-tower">詳細を見る</a>
+                        <div class="product-detail-content" id="cold-brew-tower-detail">
+                            <h4>商業用コールドブリュータワー仕様</h4>
+                            <ul>
+                                <li><strong>素材:</strong> 304/316L食品グレードステンレス鋼</li>
+                                <li><strong>設計:</strong> 多段重力供給抽出システム</li>
+                                <li><strong>流量制御:</strong> 精密デジタル流量制御システム</li>
+                                <li><strong>容量オプション:</strong> 100L、200L、300L、500L</li>
+                                <li><strong>主な特徴:</strong>
+                                    <ul>
+                                        <li>抽出のカスタマイズのための調整可能な滴下速度</li>
+                                        <li>連続生産のための複数の抽出チャンバー</li>
+                                        <li>均一な抽出のための水分配システム</li>
+                                        <li>温度制御環境</li>
+                                        <li>簡単な拡張のためのモジュラー設計</li>
+                                    </ul>
+                                </li>
+                                <li><strong>生産能力:</strong> フルシステムで1日あたり最大1000L</li>
+                                <li><strong>保証:</strong> 構造に3年間、コンポーネントに1年間の保証</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-item" data-category="coffee">
+                    <div class="product-image">
+                        <img src="../../images/products/continuous-flow-system.jpg" alt="連続フローコールドブリューシステム">
+                    </div>
+                    <div class="product-details">
+                        <h3>連続フローコールドブリューシステム</h3>
+                        <p class="product-specs">生産量: 1日あたり200L〜1000L</p>
+                        <p>連続的なコールドブリュー生産のための自動化システム。プログラム可能な抽出サイクル、インライン濾過、パッケージング統合機能を備えています。</p>
+                        <a href="#" class="btn-sm product-detail-btn" data-product="continuous-flow">詳細を見る</a>
+                        <div class="product-detail-content" id="continuous-flow-detail">
+                            <h4>連続フローコールドブリューシステム仕様</h4>
+                            <ul>
+                                <li><strong>素材:</strong> 316L食品グレードステンレス鋼</li>
+                                <li><strong>操作:</strong> 完全自動化された連続フロープロセス</li>
+                                <li><strong>濾過:</strong> 統合された多段階インライン濾過</li>
+                                <li><strong>生産能力:</strong> 1日あたり200L、500L、750L、1000L</li>
+                                <li><strong>主な特徴:</strong>
+                                    <ul>
+                                        <li>一貫した品質のための連続抽出技術</li>
+                                        <li>自動コーヒー投入と使用済み粉の除去</li>
+                                        <li>プログラム可能な抽出パラメータ</li>
+                                        <li>衛生のための統合CIPシステム</li>
+                                        <li>オプションのパッケージングライン統合</li>
+                                        <li>リモート監視と制御機能</li>
+                                    </ul>
+                                </li>
+                                <li><strong>効率:</strong> バッチシステムと比較して30%高い収率</li>
+                                <li><strong>保証:</strong> サービス契約オプション付き2年間の包括的保証</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-item" data-category="coffee">
+                    <div class="product-image">
+                        <img src="../../images/products/nitro-cold-brew-dispenser.jpg" alt="ナイトロコールドブリューディスペンサー">
+                    </div>
+                    <div class="product-details">
+                        <h3>ナイトロコールドブリューディスペンサー</h3>
+                        <p class="product-specs">タンク容量: 20L〜100L</p>
+                        <p>クリーミーなドラフトスタイルのコールドブリューコーヒー用の業務用窒素注入システム。温度制御と複数の注出タップを備えています。</p>
+                        <a href="#" class="btn-sm product-detail-btn" data-product="nitro-dispenser">詳細を見る</a>
+                        <div class="product-detail-content" id="nitro-dispenser-detail">
+                            <h4>ナイトロコールドブリューディスペンサー仕様</h4>
+                            <ul>
+                                <li><strong>素材:</strong> 304食品グレードステンレス鋼</li>
+                                <li><strong>窒素システム:</strong> 統合窒素発生器または外部タンク接続</li>
+                                <li><strong>温度制御:</strong> 温度表示付きデジタル冷却システム</li>
+                                <li><strong>容量オプション:</strong> 20L、40L、60L、100L</li>
+                                <li><strong>主な特徴:</strong>
+                                    <ul>
+                                        <li>完璧なカスケード効果のための先進的な窒素注入技術</li>
+                                        <li>カスタマイズされたテクスチャのための調整可能な窒素圧力</li>
+                                        <li>流量制御付きの複数の注出タップ</li>
+                                        <li>デジタル温度制御システム</li>
+                                        <li>清掃しやすい注出コンポーネント</li>
+                                        <li>オプションのブランド付きタップハンドルとディスプレイ</li>
+                                    </ul>
+                                </li>
+                                <li><strong>設置:</strong> カウンタートップまたはフリースタンディングオプションあり</li>
+                                <li><strong>保証:</strong> オプションの延長サービスプラン付き2年間の保証</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 水抽出システム -->
+                <div class="product-item" data-category="extraction">
+                    <div class="product-image">
+                        <img src="../../images/products/industrial-extraction-system.jpg" alt="産業用抽出システム">
+                    </div>
+                    <div class="product-details">
+                        <h3>産業用抽出システム</h3>
+                        <p class="product-specs">容量: 100L〜500L</p>
+                        <p>植物性素材の商業生産向け大規模抽出システム。温度制御、自動化、濾過機能を備えています。</p>
+                        <a href="#" class="btn-sm product-detail-btn" data-product="industrial-extraction">詳細を見る</a>
+                        <div class="product-detail-content" id="industrial-extraction-detail">
+                            <h4>産業用抽出システム仕様</h4>
+                            <ul>
+                                <li><strong>素材:</strong> 316L医薬品グレードステンレス鋼</li>
+                                <li><strong>温度制御:</strong> ±0.5°Cの精度を持つ精密冷却</li>
+                                <li><strong>自動化:</strong> レシピ管理機能を備えた完全なPLC制御システム</li>
+                                <li><strong>容量オプション:</strong> 100L、200L、300L、500L</li>
+                                <li><strong>主な特徴:</strong>
+                                    <ul>
+                                        <li>熱に敏感な化合物を保存する冷水抽出技術</li>
+                                        <li>パラメータ監視付きプログラム可能な抽出サイクル</li>
+                                        <li>統合された多段階濾過システム</li>
+                                        <li>溶剤回収とリサイクル機能</li>
+                                        <li>酸化を防ぐクローズドループシステム</li>
+                                        <li>医薬品アプリケーション向けGMP準拠設計</li>
+                                    </ul>
+                                </li>
+                                <li><strong>用途:</strong> 植物性抽出物、ハーブ濃縮物、医薬品成分</li>
+                                <li><strong>保証:</strong> 検証サービス付き3年間のメーカー保証</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-item" data-category="extraction">
+                    <div class="product-image">
+                        <img src="../../images/products/multi-stage-filtration.jpg" alt="多段階濾過システム">
+                    </div>
+                    <div class="product-details">
+                        <h3>多段階濾過システム</h3>
+                        <p class="product-specs">流量: 1時間あたり20L〜100L</p>
+                        <p>複数のフィルターメディアオプションを備えた高度な濾過システム。抽出された化合物の透明度、純度、保存のために設計されています。</p>
+                        <a href="#" class="btn-sm product-detail-btn" data-product="filtration">詳細を見る</a>
+                        <div class="product-detail-content" id="filtration-detail">
+                            <h4>多段階濾過システム仕様</h4>
+                            <ul>
+                                <li><strong>素材:</strong> 衛生的な接続を備えた316Lステンレス鋼ハウジング</li>
+                                <li><strong>濾過段階:</strong> カスタマイズ可能なメディアを持つ3〜5段階</li>
+                                <li><strong>流量オプション:</strong> 1時間あたり20L、50L、75L、100L</li>
+                                <li><strong>圧力定格:</strong> 最大10バーの動作圧力</li>
+                                <li><strong>主な特徴:</strong>
+                                    <ul>
+                                        <li>粗いものから超微細なものへの順次濾過</li>
+                                        <li>複数のフィルターメディアオプション（メッシュ、カーボン、セラミック、メンブレン）</li>
+                                        <li>各段階での圧力モニタリング</li>
+                                        <li>ダウンタイムを最小限に抑えるクイックチェンジフィルターハウジング</li>
+                                        <li>CIP互換設計</li>
+                                        <li>簡単なアップグレードのためのモジュラー構造</li>
+                                    </ul>
+                                </li>
+                                <li><strong>濾過範囲:</strong> 100ミクロンから0.2ミクロンまでの能力</li>
+                                <li><strong>保証:</strong> システムに2年間の保証、消耗品は別売</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-item" data-category="extraction">
+                    <div class="product-image">
+                        <img src="../../images/products/botanical-extraction-vessel.jpg" alt="植物抽出容器">
+                    </div>
+                    <div class="product-details">
+                        <h3>植物抽出容器</h3>
+                        <p class="product-specs">容量: 50L〜300L</p>
+                        <p>植物材料の冷水抽出のための専用容器。調整可能な抽出パラメータと衛生的な設計を特徴としています。</p>
+                        <a href="#" class="btn-sm product-detail-btn" data-product="botanical-vessel">詳細を見る</a>
+                        <div class="product-detail-content" id="botanical-vessel-detail">
+                            <h4>植物抽出容器仕様</h4>
+                            <ul>
+                                <li><strong>素材:</strong> 316L医薬品グレードステンレス鋼</li>
+                                <li><strong>設計:</strong> 冷却/加熱機能付きダブルジャケット容器</li>
+                                <li><strong>温度範囲:</strong> 2°Cから90°Cまで、±1°Cの精度</li>
+                                <li><strong>容量オプション:</strong> 50L、100L、200L、300L</li>
+                                <li><strong>主な特徴:</strong>
+                                    <ul>
+                                        <li>植物材料封じ込めのための特殊バスケットシステム</li>
+                                        <li>最適な抽出のための穏やかな攪拌メカニズム</li>
+                                        <li>パラメータ制御付きプログラム可能な抽出サイクル</li>
+                                        <li>全体的な衛生的なトライクランプ継手</li>
+                                        <li>濾過オプション付きの底部排出バルブ</li>
+                                        <li>プロセス監視のための覗き窓</li>
+                                    </ul>
+                                </li>
+                                <li><strong>用途:</strong> ハーブ、植物性素材、茶、コーヒー、スパイス</li>
+                                <li><strong>保証:</strong> 容器に5年間、コンポーネントに2年間の保証</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-item" data-category="extraction">
+                    <div class="product-image">
+                        <img src="../../images/products/extraction-control-system.jpg" alt="抽出制御システム">
+                    </div>
+                    <div class="product-details">
+                        <h3>抽出制御システム</h3>
+                        <p class="product-specs">すべての抽出システムに対応</p>
+                        <p>抽出パラメータを管理するためのプログラム可能な制御システム。レシピ保存、データロギング、プロセス可視化機能を備えています。</p>
+                        <a href="#" class="btn-sm product-detail-btn" data-product="extraction-control">詳細を見る</a>
+                        <div class="product-detail-content" id="extraction-control-detail">
+                            <h4>抽出制御システム仕様</h4>
+                            <ul>
+                                <li><strong>コントローラー:</strong> 冗長バックアップ付き産業グレードPLC</li>
+                                <li><strong>インターフェース:</strong> 直感的なUIを備えた12インチカラータッチスクリーン</li>
+                                <li><strong>ソフトウェア:</strong> 独自の抽出管理ソフトウェア</li>
+                                <li><strong>接続性:</strong> イーサネット、Wi-Fi、USBデータエクスポート</li>
+                                <li><strong>主な特徴:</strong>
+                                    <ul>
+                                        <li>リアルタイムのパラメータ監視と制御</li>
+                                        <li>包括的なレシピ管理システム</li>
+                                        <li>エクスポート可能なレポート付きデータロギング</li>
+                                        <li>アニメーションのあるグラフィックによるプロセス可視化</li>
+                                        <li>権限レベル付きユーザーアクセス制御</li>
+                                        <li>通知オプション付きアラーム管理</li>
+                                    </ul>
+                                </li>
+                                <li><strong>互換性:</strong> 既存の抽出システムに後付け可能</li>
+                                <li><strong>保証:</strong> ソフトウェアアップデートサブスクリプション付き2年間の保証</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cta-section">
+                <h2>カスタムソリューションが必要ですか？</h2>
+                <p>当社のエンジニアリングチームがお客様の特定の要件に合わせた装置を設計・製造します。</p>
+                <a href="contact.html" class="btn">コンサルテーションのお問い合わせ</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>MASSA</h2>
+                    <p>プロフェッショナルな醸造・抽出装置</p>
+                </div>
+                <div class="footer-links">
+                    <h3>クイックリンク</h3>
+                    <ul>
+                        <li><a href="index.html">ホーム</a></li>
+                        <li><a href="about.html">会社概要</a></li>
+                        <li><a href="products.html">製品</a></li>
+                        <li><a href="process.html">プロセス</a></li>
+                        <li><a href="contact.html">お問い合わせ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h3>フォローする</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Massa. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // モバイルメニュー切り替え
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+            document.querySelector('nav ul').classList.toggle('active');
+        });
+
+        // 製品フィルタリング
+        const tabButtons = document.querySelectorAll('.tab-button');
+        const productItems = document.querySelectorAll('.product-item');
+        
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // すべてのボタンからアクティブクラスを削除
+                tabButtons.forEach(btn => btn.classList.remove('active'));
+                
+                // クリックされたボタンにアクティブクラスを追加
+                button.classList.add('active');
+                
+                // フィルタリングするカテゴリを取得
+                const category = button.getAttribute('data-category');
+                
+                // 製品をフィルタリング
+                productItems.forEach(item => {
+                    if (category === 'all' || item.getAttribute('data-category') === category) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Product detail toggle functionality
+        const detailButtons = document.querySelectorAll('.product-detail-btn');
+        detailButtons.forEach(button => {
+            button.addEventListener('click', function(e) {
+                e.preventDefault();
+                const productId = this.getAttribute('data-product');
+                const detailContent = document.getElementById(productId + '-detail');
+                
+                // Close all other open details
+                document.querySelectorAll('.product-detail-content').forEach(content => {
+                    if (content.id !== productId + '-detail' && content.classList.contains('active')) {
+                        content.classList.remove('active');
+                    }
+                });
+                
+                // Toggle current detail
+                detailContent.classList.toggle('active');
+                
+                // Change button text
+                if (detailContent.classList.contains('active')) {
+                    this.textContent = '詳細を隠す';
+                } else {
+                    this.textContent = '詳細を見る';
+                }
+            });
+        });
+    </script>
+
+    <style>
+        /* Product detail content styling */
+        .product-detail-content {
+            display: none;
+            background-color: #f8f9fa;
+            border-radius: 5px;
+            padding: 15px;
+            margin-top: 15px;
+            border-left: 3px solid #0056b3;
+            font-size: 0.9rem;
+        }
+        
+        .product-detail-content.active {
+            display: block;
+        }
+        
+        .product-detail-content h4 {
+            color: #0056b3;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+        
+        .product-detail-content ul {
+            padding-left: 20px;
+            margin-bottom: 0;
+        }
+        
+        .product-detail-content ul ul {
+            margin-top: 5px;
+        }
+        
+        .product-detail-content li {
+            margin-bottom: 5px;
+        }
+        
+        .product-detail-content strong {
+            color: #343a40;
+        }
+    </style>
+</body>
+</html>

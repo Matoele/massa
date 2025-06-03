@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제품 - Massa</title>
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="https://img.icons8.com/fluency/48/brewery.png" type="image/png">
+    <meta name="description" content="Massa의 크래프트 맥주 양조 시스템, 콜드 브루 커피 장비 및 냉수 추출 시스템을 포함한 전문 양조 및 추출 장비 제품군을 살펴보세요.">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>MASSA</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">홈</a></li>
+                    <li><a href="about.html">회사 소개</a></li>
+                    <li><a href="products.html" class="active">제품</a></li>
+                    <li><a href="process.html">프로세스</a></li>
+                    <li><a href="contact.html">문의하기</a></li>
+                    <li class="language-selector">
+                        <a href="#"><i class="fas fa-globe"></i> KR <i class="fas fa-chevron-down"></i></a>
+                        <ul class="language-dropdown">
+                            <li><a href="../../index.html" data-lang="en">English</a></li>
+                            <li><a href="../ja/index.html" data-lang="ja">日本語</a></li>
+                            <li><a href="../ko/index.html" data-lang="ko">한국어</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>제품 라인업</h1>
+            <p>상업용 애플리케이션을 위한 전문 장비</p>
+        </div>
+    </section>
+
+    <section class="products-page">
+        <div class="container">
+            <div class="product-categories-tabs">
+                <div class="tabs">
+                    <button class="tab-button active" data-category="all">모든 제품</button>
+                    <button class="tab-button" data-category="beer">크래프트 맥주 장비</button>
+                    <button class="tab-button" data-category="coffee">콜드 브루 커피</button>
+                    <button class="tab-button" data-category="extraction">냉수 추출 시스템</button>
+                </div>
+            </div>
+
+            <div class="product-grid" id="productGrid">
+                <!-- 크래프트 맥주 장비 -->
+                <div class="product-item" data-category="beer">
+                    <div class="product-image">
+                        <img src="../../images/products/microbrewery-system.jpg" alt="마이크로 양조장 시스템">
+                    </div>
+                    <div class="product-details">
+                        <h3>마이크로 양조장 시스템</h3>
+                        <p class="product-specs">용량: 3HL ~ 10HL</p>
+                        <p>소규모에서 중간 규모의 크래프트 양조장을 위한 완전한 턴키 양조 시스템으로, 매쉬 턴, 라우터 턴, 케틀, 월풀 및 제어 시스템을 포함합니다.</p>
+                        <a href="#" class="btn-sm product-detail-btn" data-product="microbrewery">상세 보기</a>
+                        <div class="product-detail-content" id="microbrewery-detail">
+                            <h4>마이크로 양조 시스템 사양</h4>
+                            <ul>
+                                <li><strong>재질:</strong> 304 식품 등급 스테인리스 스틸</li>
+                                <li><strong>가열 방식:</strong> 오일 가열, 스팀 가열 또는 전기 가열 옵션 제공</li>
+                                <li><strong>제어 시스템:</strong> 터치스크린 인터페이스가 있는 PLC 자동 제어</li>
+                                <li><strong>용량 옵션:</strong> 3HL, 5HL, 7HL, 10HL</li>
+                                <li><strong>주요 기능:</strong>
+                                    <ul>
+                                        <li>에너지 효율적인 열유 가열 시스템</li>
+                                        <li>통합 CIP(Clean-in-Place) 시스템</li>
+                                        <li>디지털 온도 및 압력 모니터링</li>
+                                        <li>레시피 관리 소프트웨어</li>
+                                        <li>맞춤형 양조 매개변수</li>
+                                    </ul>
+                                </li>
+                                <li><strong>설치:</strong> 전문 설치 및 교육 포함</li>
+                                <li><strong>보증:</strong> 2년 제조업체 보증</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-item" data-category="beer">
+                    <div class="product-image">
+                        <img src="../../images/products/commercial-brewing-system.jpg" alt="상업용 양조 시스템">
+                    </div>
+                    <div class="product-details">
+                        <h3>상업용 양조 시스템</h3>
+                        <p class="product-specs">용량: 15HL ~ 50HL</p>
+                        <p>상업적 생산을 위한 대용량 양조 시스템으로, 고급 자동화, 에너지 회수 시스템 및 맞춤형 구성이 특징입니다.</p>
+                        <a href="#" class="btn-sm product-detail-btn" data-product="commercial-brewing">상세 보기</a>
+                        <div class="product-detail-content" id="commercial-brewing-detail">
+                            <h4>상업용 양조 시스템 사양</h4>
+                            <ul>
+                                <li><strong>재질:</strong> 304/316L 식품 등급 스테인리스 스틸</li>
+                                <li><strong>가열 방식:</strong> 에너지 회수 시스템이 있는 오일 가열 양조장</li>
+                                <li><strong>제어 시스템:</strong> 원격 모니터링 기능이 있는 고급 PLC 자동화</li>
+                                <li><strong>용량 옵션:</strong> 15HL, 20HL, 30HL, 50HL</li>
+                                <li><strong>주요 기능:</strong>
+                                    <ul>
+                                        <li>30% 에너지 절약을 위한 특허받은 열유 가열 기술</li>
+                                        <li>완전 자동화된 양조 공정</li>
+                                        <li>스팀 회수 및 물 재활용 시스템</li>
+                                        <li>통합 곡물 처리 시스템</li>
+                                        <li>고급 맥즙 냉각 기술</li>
+                                        <li>특정 양조장 요구 사항에 맞게 사용자 정의 가능</li>
+                                    </ul>
+                                </li>
+                                <li><strong>설치:</strong> 종합적인 설치, 설정 및 직원 교육 포함</li>
+                                <li><strong>보증:</strong> 서비스 패키지 옵션이 있는 3년 제조업체 보증</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-item" data-category="beer">
+                    <div class="product-image">
+                        <img src="../../images/products/fermentation-tanks.jpg" alt="발효 탱크">
+                    </div>
+                    <div class="product-details">
+                        <h3>발효 및 컨디셔닝 탱크</h3>
+                        <p class="product-specs">용량: 5HL ~ 100HL</p>
+                        <p>정밀한 온도 제어, 압력 방출 밸브 및 샘플링 포트가 있는 재킷이 있는 스테인리스 스틸 발효 및 컨디셔닝 탱크입니다.</p>
+                        <a href="#" class="btn-sm product-detail-btn" data-product="fermentation">상세 보기</a>
+                        <div class="product-detail-content" id="fermentation-detail">
+                            <h4>발효 및 컨디셔닝 탱크 사양</h4>
+                            <ul>
+                                <li><strong>재질:</strong> 연마된 내부가 있는 304 식품 등급 스테인리스 스틸</li>
+                                <li><strong>냉각 시스템:</strong> 정밀 온도 제어가 있는 글리콜 재킷</li>
+                                <li><strong>압력 등급:</strong> 3 bar 작동 압력</li>
+                                <li><strong>용량 옵션:</strong> 5HL, 10HL, 20HL, 30HL, 50HL, 100HL</li>
+                                <li><strong>주요 기능:</strong>
+                                    <ul>
+                                        <li>효율적인 온도 제어를 위한 딤플 냉각 재킷</li>
+                                        <li>디지털 온도 모니터링 및 제어 시스템</li>
+                                        <li>철저한 청소를 위한 CIP 스프레이 볼</li>
+                                        <li>다양한 높이의 여러 샘플링 포트</li>
+                                        <li>조절 가능한 압력 방출 밸브</li>
+                                        <li>맞춤형 피팅 및 액세서리</li>
+                                    </ul>
+                                </li>
+                                <li><strong>옵션:</strong> 유니탱크 설계 또는 전용 발효/컨디셔닝 탱크</li>
+                                <li><strong>보증:</strong> 탱크 구조에 5년, 구성 요소에 2년 보증</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-item" data-category="beer">
+                    <div class="product-image">
+                        <img src="../../images/products/brewing-control-system.jpg" alt="양조 제어 시스템">
+                    </div>
+                    <div class="product-details">
+                        <h3>양조 제어 시스템</h3>
+                        <p class="product-specs">모든 양조 시스템과 호환</p>
+                        <p>터치스크린 인터페이스, 자동화된 레시피 관리, 데이터 로깅 및 원격 모니터링 기능을 갖춘 고급 제어 시스템입니다.</p>
+                        <a href="#" class="btn-sm product-detail-btn" data-product="control-system">상세 보기</a>
+                        <div class="product-detail-content" id="control-system-detail">
+                            <h4>양조 제어 시스템 사양</h4>
+                            <ul>
+                                <li><strong>컨트롤러:</strong> 중복성 옵션이 있는 산업용 PLC</li>
+                                <li><strong>인터페이스:</strong> 직관적인 그래픽 인터페이스가 있는 15인치 터치스크린 HMI</li>
+                                <li><strong>소프트웨어:</strong> 레시피 데이터베이스가 있는 독점 양조 관리 소프트웨어</li>
+                                <li><strong>연결성:</strong> 이더넷, Wi-Fi, 옵션 셀룰러 백업</li>
+                                <li><strong>주요 기능:</strong>
+                                    <ul>
+                                        <li>실시간 공정 시각화 및 제어</li>
+                                        <li>단계별 안내가 있는 자동화된 레시피 실행</li>
+                                        <li>종합적인 데이터 로깅 및 보고</li>
+                                        <li>모바일 앱을 통한 원격 모니터링 및 제어</li>
+                                        <li>경보 관리 및 알림 시스템</li>
+                                        <li>양조장 관리 소프트웨어와 통합</li>
+                                    </ul>
+                                </li>
+                                <li><strong>호환성:</strong> 기존 양조 시스템에 개조 가능</li>
+                                <li><strong>보증:</strong> 소프트웨어 업데이트 구독이 포함된 2년 보증</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 콜드 브루 커피 장비 -->
+                <div class="product-item" data-category="coffee">
+                    <div class="product-image">
+                        <img src="../../images/products/batch-cold-brew-system.jpg" alt="배치 콜드 브루 시스템">
+                    </div>
+                    <div class="product-details">
+                        <h3>배치 콜드 브루 시스템</h3>
+                        <p class="product-specs">용량: 50L ~ 200L</p>
+                        <p>스테인리스 스틸 양조 용기, 여과 시스템 및 온도 제어 기능을 갖춘 배치 콜드 브루 생산을 위한 완전한 시스템입니다.</p>
+                        <a href="#" class="btn-sm product-detail-btn" data-product="batch-cold-brew">상세 보기</a>
+                        <div class="product-detail-content" id="batch-cold-brew-detail">
+                            <h4>배치 콜드 브루 시스템 사양</h4>
+                            <ul>
+                                <li><strong>재질:</strong> 304 식품 등급 스테인리스 스틸</li>
+                                <li><strong>온도 제어:</strong> 디지털 컨트롤러가 있는 정밀 냉각 시스템</li>
+                                <li><strong>여과:</strong> 교체 가능한 요소가 있는 다단계 여과 시스템</li>
+                                <li><strong>용량 옵션:</strong> 50L, 100L, 150L, 200L</li>
+                                <li><strong>주요 기능:</strong>
+                                    <ul>
+                                        <li>산소가 없는 추출 환경</li>
+                                        <li>최적의 추출을 위한 부드러운 교반 시스템</li>
+                                        <li>프로그래밍 가능한 추출 시간 및 온도</li>
+                                        <li>다양한 필터 옵션이 있는 통합 여과</li>
+                                        <li>CIP 기능이 있는 쉬운 청소 설계</li>
+                                    </ul>
+                                </li>
+                                <li><strong>생산 시간:</strong> 12-24시간 추출 사이클</li>
+                                <li><strong>보증:</strong> 2년 제조업체 보증</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-item" data-category="coffee">
+                    <div class="product-image">
+                        <img src="../../images/products/commercial-cold-brew-tower.jpg" alt="상업용 콜드 브루 타워">
+                    </div>
+                    <div class="product-details">
+                        <h3>상업용 콜드 브루 타워</h3>
+                        <p class="product-specs">용량: 100L ~ 500L</p>
+                        <p>제어된 드립 속도, 여러 추출 챔버 및 수집 탱크가 있는 대량 생산을 위한 다층 콜드 브루 타워 시스템입니다.</p>
+                        <a href="#" class="btn-sm product-detail-btn" data-product="cold-brew-tower">상세 보기</a>
+                        <div class="product-detail-content" id="cold-brew-tower-detail">
+                            <h4>상업용 콜드 브루 타워 사양</h4>
+                            <ul>
+                                <li><strong>재질:</strong> 304/316L 식품 등급 스테인리스 스틸</li>
+                                <li><strong>설계:</strong> 다층 중력 공급 추출 시스템</li>
+                                <li><strong>유량 제어:</strong> 정밀 디지털 유량 제어 시스템</li>
+                                <li><strong>용량 옵션:</strong> 100L, 200L, 300L, 500L</li>
+                                <li><strong>주요 기능:</strong>
+                                    <ul>
+                                        <li>추출 사용자 정의를 위한 조절 가능한 드립 속도</li>
+                                        <li>연속 생산을 위한 다중 추출 챔버</li>
+                                        <li>균일한 추출을 위한 물 분배 시스템</li>
+                                        <li>온도 제어 환경</li>
+                                        <li>쉬운 확장을 위한 모듈식 설계</li>
+                                    </ul>
+                                </li>
+                                <li><strong>생산 용량:</strong> 전체 시스템으로 하루 최대 1000L</li>
+                                <li><strong>보증:</strong> 구조에 3년, 구성 요소에 1년 보증</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-item" data-category="coffee">
+                    <div class="product-image">
+                        <img src="../../images/products/continuous-flow-system.jpg" alt="연속 흐름 콜드 브루 시스템">
+                    </div>
+                    <div class="product-details">
+                        <h3>연속 흐름 콜드 브루 시스템</h3>
+                        <p class="product-specs">생산량: 하루 200L ~ 1000L</p>
+                        <p>프로그래밍 가능한 추출 사이클, 인라인 여과 및 포장 통합 기능을 갖춘 연속 콜드 브루 생산을 위한 자동화된 시스템입니다.</p>
+                        <a href="#" class="btn-sm product-detail-btn" data-product="continuous-flow">상세 보기</a>
+                        <div class="product-detail-content" id="continuous-flow-detail">
+                            <h4>연속 흐름 콜드 브루 시스템 사양</h4>
+                            <ul>
+                                <li><strong>재질:</strong> 316L 식품 등급 스테인리스 스틸</li>
+                                <li><strong>작동:</strong> 완전 자동화된 연속 흐름 공정</li>
+                                <li><strong>여과:</strong> 통합된 다단계 인라인 여과</li>
+                                <li><strong>생산 용량:</strong> 하루 200L, 500L, 750L, 1000L</li>
+                                <li><strong>주요 기능:</strong>
+                                    <ul>
+                                        <li>일관된 품질을 위한 연속 추출 기술</li>
+                                        <li>자동화된 커피 로딩 및 사용된 원두 제거</li>
+                                        <li>프로그래밍 가능한 추출 매개변수</li>
+                                        <li>위생을 위한 통합 CIP 시스템</li>
+                                        <li>선택적 포장 라인 통합</li>
+                                        <li>원격 모니터링 및 제어 기능</li>
+                                    </ul>
+                                </li>
+                                <li><strong>효율성:</strong> 배치 시스템에 비해 30% 높은 수율</li>
+                                <li><strong>보증:</strong> 서비스 계약 옵션이 있는 2년 종합 보증</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-item" data-category="coffee">
+                    <div class="product-image">
+                        <img src="../../images/products/nitro-cold-brew-dispenser.jpg" alt="나이트로 콜드 브루 디스펜서">
+                    </div>
+                    <div class="product-details">
+                        <h3>나이트로 콜드 브루 디스펜서</h3>
+                        <p class="product-specs">탱크 용량: 20L ~ 100L</p>
+                        <p>온도 제어 및 여러 디스펜스 탭이 있는 크리미한 드래프트 스타일 콜드 브루 커피용 상업용 질소 주입 시스템입니다.</p>
+                        <a href="#" class="btn-sm product-detail-btn" data-product="nitro-dispenser">상세 보기</a>
+                        <div class="product-detail-content" id="nitro-dispenser-detail">
+                            <h4>나이트로 콜드 브루 디스펜서 사양</h4>
+                            <ul>
+                                <li><strong>재질:</strong> 304 식품 등급 스테인리스 스틸</li>
+                                <li><strong>질소 시스템:</strong> 통합 질소 발생기 또는 외부 탱크 연결</li>
+                                <li><strong>온도 제어:</strong> 온도 표시가 있는 디지털 냉각 시스템</li>
+                                <li><strong>용량 옵션:</strong> 20L, 40L, 60L, 100L</li>
+                                <li><strong>주요 기능:</strong>
+                                    <ul>
+                                        <li>완벽한 캐스케이딩 효과를 위한 고급 질소 주입 기술</li>
+                                        <li>맞춤형 텍스처를 위한 조절 가능한 질소 압력</li>
+                                        <li>유량 제어가 있는 여러 디스펜싱 탭</li>
+                                        <li>디지털 온도 제어 시스템</li>
+                                        <li>쉽게 청소할 수 있는 디스펜싱 구성 요소</li>
+                                        <li>선택적 브랜드 탭 핸들 및 디스플레이</li>
+                                    </ul>
+                                </li>
+                                <li><strong>설치:</strong> 카운터탑 또는 독립형 옵션 사용 가능</li>
+                                <li><strong>보증:</strong> 선택적 확장 서비스 계획이 있는 2년 보증</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 냉수 추출 시스템 -->
+                <div class="product-item" data-category="extraction">
+                    <div class="product-image">
+                        <img src="../../images/products/industrial-extraction-system.jpg" alt="산업용 추출 시스템">
+                    </div>
+                    <div class="product-details">
+                        <h3>산업용 추출 시스템</h3>
+                        <p class="product-specs">용량: 100L ~ 500L</p>
+                        <p>식물성 추출물의 상업적 생산을 위한 대규모 추출 시스템으로, 온도 제어, 자동화 및 여과 기능을 갖추고 있습니다.</p>
+                        <a href="#" class="btn-sm product-detail-btn" data-product="industrial-extraction">상세 보기</a>
+                        <div class="product-detail-content" id="industrial-extraction-detail">
+                            <h4>산업용 추출 시스템 사양</h4>
+                            <ul>
+                                <li><strong>재질:</strong> 316L 제약 등급 스테인리스 스틸</li>
+                                <li><strong>온도 제어:</strong> ±0.5°C 정확도의 정밀 냉각</li>
+                                <li><strong>자동화:</strong> 레시피 관리 기능이 있는 전체 PLC 제어 시스템</li>
+                                <li><strong>용량 옵션:</strong> 100L, 200L, 300L, 500L</li>
+                                <li><strong>주요 기능:</strong>
+                                    <ul>
+                                        <li>열에 민감한 화합물을 보존하는 냉수 추출 기술</li>
+                                        <li>매개변수 모니터링이 있는 프로그래밍 가능한 추출 사이클</li>
+                                        <li>통합된 다단계 여과 시스템</li>
+                                        <li>용매 회수 및 재활용 기능</li>
+                                        <li>산화를 방지하는 폐쇄 루프 시스템</li>
+                                        <li>제약 응용 프로그램을 위한 GMP 준수 설계</li>
+                                    </ul>
+                                </li>
+                                <li><strong>응용 분야:</strong> 식물성 추출물, 허브 농축물, 제약 성분</li>
+                                <li><strong>보증:</strong> 검증 서비스가 포함된 3년 제조업체 보증</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-item" data-category="extraction">
+                    <div class="product-image">
+                        <img src="../../images/products/multi-stage-filtration.jpg" alt="다단계 여과 시스템">
+                    </div>
+                    <div class="product-details">
+                        <h3>다단계 여과 시스템</h3>
+                        <p class="product-specs">유량: 시간당 20L ~ 100L</p>
+                        <p>여러 필터 미디어 옵션을 갖춘 고급 여과 시스템으로, 추출된 화합물의 선명도, 순도 및 보존을 위해 설계되었습니다.</p>
+                        <a href="#" class="btn-sm product-detail-btn" data-product="filtration">상세 보기</a>
+                        <div class="product-detail-content" id="filtration-detail">
+                            <h4>다단계 여과 시스템 사양</h4>
+                            <ul>
+                                <li><strong>재질:</strong> 위생적인 연결이 있는 316L 스테인리스 스틸 하우징</li>
+                                <li><strong>여과 단계:</strong> 맞춤형 미디어가 있는 3-5단계</li>
+                                <li><strong>유량 옵션:</strong> 시간당 20L, 50L, 75L, 100L</li>
+                                <li><strong>압력 등급:</strong> 최대 10 bar 작동 압력</li>
+                                <li><strong>주요 기능:</strong>
+                                    <ul>
+                                        <li>거친 것에서 초미세한 것까지 순차적 여과</li>
+                                        <li>다양한 필터 미디어 옵션(메시, 카본, 세라믹, 멤브레인)</li>
+                                        <li>각 단계에서의 압력 모니터링</li>
+                                        <li>다운타임을 최소화하는 퀵 체인지 필터 하우징</li>
+                                        <li>CIP 호환 설계</li>
+                                        <li>쉬운 업그레이드를 위한 모듈식 구조</li>
+                                    </ul>
+                                </li>
+                                <li><strong>여과 범위:</strong> 100 미크론에서 0.2 미크론까지 가능</li>
+                                <li><strong>보증:</strong> 시스템에 2년 보증, 소모품은 별도 판매</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-item" data-category="extraction">
+                    <div class="product-image">
+                        <img src="../../images/products/botanical-extraction-vessel.jpg" alt="식물성 추출 용기">
+                    </div>
+                    <div class="product-details">
+                        <h3>식물성 추출 용기</h3>
+                        <p class="product-specs">용량: 50L ~ 300L</p>
+                        <p>식물성 재료의 냉수 추출을 위한 특수 용기로, 조절 가능한 추출 매개변수와 위생적인 설계를 갖추고 있습니다.</p>
+                        <a href="#" class="btn-sm product-detail-btn" data-product="botanical-vessel">상세 보기</a>
+                        <div class="product-detail-content" id="botanical-vessel-detail">
+                            <h4>식물성 추출 용기 사양</h4>
+                            <ul>
+                                <li><strong>재질:</strong> 316L 제약 등급 스테인리스 스틸</li>
+                                <li><strong>설계:</strong> 냉각/가열 기능이 있는 이중 재킷 용기</li>
+                                <li><strong>온도 범위:</strong> 2°C에서 90°C까지, ±1°C 정밀도</li>
+                                <li><strong>용량 옵션:</strong> 50L, 100L, 200L, 300L</li>
+                                <li><strong>주요 기능:</strong>
+                                    <ul>
+                                        <li>식물성 재료 보관을 위한 특수 바스켓 시스템</li>
+                                        <li>최적의 추출을 위한 부드러운 교반 메커니즘</li>
+                                        <li>매개변수 제어가 있는 프로그래밍 가능한 추출 사이클</li>
+                                        <li>전체적인 위생적인 트라이 클램프 피팅</li>
+                                        <li>여과 옵션이 있는 하단 배출 밸브</li>
+                                        <li>공정 모니터링을 위한 관찰창</li>
+                                    </ul>
+                                </li>
+                                <li><strong>응용 분야:</strong> 허브, 식물성 재료, 차, 커피, 향신료</li>
+                                <li><strong>보증:</strong> 용기에 5년, 구성 요소에 2년 보증</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-item" data-category="extraction">
+                    <div class="product-image">
+                        <img src="../../images/products/extraction-control-system.jpg" alt="추출 제어 시스템">
+                    </div>
+                    <div class="product-details">
+                        <h3>추출 제어 시스템</h3>
+                        <p class="product-specs">모든 추출 시스템과 호환</p>
+                        <p>추출 매개변수를 관리하기 위한 프로그래밍 가능한 제어 시스템으로, 레시피 저장, 데이터 로깅 및 프로세스 시각화 기능을 갖추고 있습니다.</p>
+                        <a href="#" class="btn-sm product-detail-btn" data-product="extraction-control">상세 보기</a>
+                        <div class="product-detail-content" id="extraction-control-detail">
+                            <h4>추출 제어 시스템 사양</h4>
+                            <ul>
+                                <li><strong>컨트롤러:</strong> 중복 백업이 있는 산업용 PLC</li>
+                                <li><strong>인터페이스:</strong> 직관적인 UI가 있는 12인치 컬러 터치스크린</li>
+                                <li><strong>소프트웨어:</strong> 독점 추출 관리 소프트웨어</li>
+                                <li><strong>연결성:</strong> 이더넷, Wi-Fi, USB 데이터 내보내기</li>
+                                <li><strong>주요 기능:</strong>
+                                    <ul>
+                                        <li>실시간 매개변수 모니터링 및 제어</li>
+                                        <li>종합적인 레시피 관리 시스템</li>
+                                        <li>내보낼 수 있는 보고서가 있는 데이터 로깅</li>
+                                        <li>애니메이션 그래픽이 있는 프로세스 시각화</li>
+                                        <li>권한 수준이 있는 사용자 액세스 제어</li>
+                                        <li>알림 옵션이 있는 경보 관리</li>
+                                    </ul>
+                                </li>
+                                <li><strong>호환성:</strong> 기존 추출 시스템에 개조 가능</li>
+                                <li><strong>보증:</strong> 소프트웨어 업데이트 구독이 포함된 2년 보증</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cta-section">
+                <h2>맞춤형 솔루션이 필요하신가요?</h2>
+                <p>당사의 엔지니어링 팀이 귀하의 특정 요구 사항에 맞는 장비를 설계하고 제작할 수 있습니다.</p>
+                <a href="contact.html" class="btn">상담 문의하기</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>MASSA</h2>
+                    <p>전문 양조 및 추출 장비</p>
+                </div>
+                <div class="footer-links">
+                    <h3>빠른 링크</h3>
+                    <ul>
+                        <li><a href="index.html">홈</a></li>
+                        <li><a href="about.html">회사 소개</a></li>
+                        <li><a href="products.html">제품</a></li>
+                        <li><a href="process.html">프로세스</a></li>
+                        <li><a href="contact.html">문의하기</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h3>소셜 미디어</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Massa. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 모바일 메뉴 토글
+        document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
+            document.querySelector('nav ul').classList.toggle('active');
+        });
+
+        // 제품 필터링
+        const tabButtons = document.querySelectorAll('.tab-button');
+        const productItems = document.querySelectorAll('.product-item');
+        
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // 모든 버튼에서 활성 클래스 제거
+                tabButtons.forEach(btn => btn.classList.remove('active'));
+                
+                // 클릭된 버튼에 활성 클래스 추가
+                button.classList.add('active');
+                
+                // 필터링할 카테고리 가져오기
+                const category = button.getAttribute('data-category');
+                
+                // 제품 필터링
+                productItems.forEach(item => {
+                    if (category === 'all' || item.getAttribute('data-category') === category) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Product detail toggle functionality
+        const detailButtons = document.querySelectorAll('.product-detail-btn');
+        detailButtons.forEach(button => {
+            button.addEventListener('click', function(e) {
+                e.preventDefault();
+                const productId = this.getAttribute('data-product');
+                const detailContent = document.getElementById(productId + '-detail');
+                
+                // Close all other open details
+                document.querySelectorAll('.product-detail-content').forEach(content => {
+                    if (content.id !== productId + '-detail' && content.classList.contains('active')) {
+                        content.classList.remove('active');
+                    }
+                });
+                
+                // Toggle current detail
+                detailContent.classList.toggle('active');
+                
+                // Change button text
+                if (detailContent.classList.contains('active')) {
+                    this.textContent = '상세 정보 숨기기';
+                } else {
+                    this.textContent = '상세 보기';
+                }
+            });
+        });
+    </script>
+
+    <style>
+        /* Product detail content styling */
+        .product-detail-content {
+            display: none;
+            background-color: #f8f9fa;
+            border-radius: 5px;
+            padding: 15px;
+            margin-top: 15px;
+            border-left: 3px solid #0056b3;
+            font-size: 0.9rem;
+        }
+        
+        .product-detail-content.active {
+            display: block;
+        }
+        
+        .product-detail-content h4 {
+            color: #0056b3;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+        
+        .product-detail-content ul {
+            padding-left: 20px;
+            margin-bottom: 0;
+        }
+        
+        .product-detail-content ul ul {
+            margin-top: 5px;
+        }
+        
+        .product-detail-content li {
+            margin-bottom: 5px;
+        }
+        
+        .product-detail-content strong {
+            color: #343a40;
+        }
+    </style>
+</body>
+</html>

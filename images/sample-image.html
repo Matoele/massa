@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sample Image</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        .image-box {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            color: white;
+            text-align: center;
+        }
+        .title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div id="imageBox" class="image-box">
+        <div id="title" class="title">Sample Image</div>
+        <div id="subtitle" class="subtitle">Massa Brewing Equipment</div>
+    </div>
+
+    <script>
+        function getUrlParameter(name) {
+            name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+            var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+            var results = regex.exec(location.search);
+            return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+        }
+
+        const box = document.getElementById('imageBox');
+        const title = document.getElementById('title');
+        const subtitle = document.getElementById('subtitle');
+        
+        const bgColor = getUrlParameter('bg') || '1a3c6e';
+        const textColor = getUrlParameter('color') || 'ffffff';
+        const titleText = getUrlParameter('title') || 'Sample Image';
+        const subtitleText = getUrlParameter('subtitle') || 'Massa Brewing Equipment';
+
+        box.style.backgroundColor = '#' + bgColor;
+        box.style.color = '#' + textColor;
+        title.textContent = titleText;
+        subtitle.textContent = subtitleText;
+    </script>
+</body>
+</html> 

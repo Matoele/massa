@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Generator</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+        .image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            box-sizing: border-box;
+            overflow: hidden;
+        }
+        .text {
+            font-weight: bold;
+            max-width: 90%;
+            word-wrap: break-word;
+        }
+    </style>
+</head>
+<body>
+    <div id="imageContainer" class="image-container">
+        <div id="text" class="text"></div>
+    </div>
+
+    <script>
+        // Get URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const width = urlParams.get('width') || 600;
+        const height = urlParams.get('height') || 400;
+        const bgColor = urlParams.get('bg') || '1a3c6e';
+        const textContent = urlParams.get('text') || 'Sample Image';
+        const fontSize = urlParams.get('size') || Math.min(width, height) * 0.1;
+
+        // Apply settings
+        const container = document.getElementById('imageContainer');
+        container.style.width = width + 'px';
+        container.style.height = height + 'px';
+        container.style.backgroundColor = '#' + bgColor;
+
+        const text = document.getElementById('text');
+        text.textContent = textContent;
+        text.style.fontSize = fontSize + 'px';
+    </script>
+</body>
+</html> 
