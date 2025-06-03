@@ -459,6 +459,11 @@
         </div>
     </footer>
 
+    <!-- 回到顶部按钮 -->
+    <div class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
     <script>
         // Mobile menu toggle
         document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
@@ -474,6 +479,82 @@
         
         let currentSlide = 0;
         const slideCount = slides.length;
+        let startX, moveX;
+        let isMouseDown = false;
+        
+        // 添加触摸滑动功能
+        slider.addEventListener('touchstart', function(e) {
+            startX = e.touches[0].clientX;
+        }, {passive: true});
+        
+        slider.addEventListener('touchmove', function(e) {
+            if (!startX) return;
+            moveX = e.touches[0].clientX;
+        }, {passive: true});
+        
+        slider.addEventListener('touchend', function(e) {
+            if (!startX || !moveX) return;
+            
+            const diffX = startX - moveX;
+            const threshold = 50; // 最小滑动距离
+            
+            if (Math.abs(diffX) > threshold) {
+                if (diffX > 0) {
+                    // 向左滑动，显示下一张
+                    nextSlide();
+                } else {
+                    // 向右滑动，显示上一张
+                    prevSlide();
+                }
+            }
+            
+            // 重置变量
+            startX = null;
+            moveX = null;
+        }, {passive: true});
+        
+        // 添加鼠标拖动功能（桌面端）
+        slider.addEventListener('mousedown', function(e) {
+            isMouseDown = true;
+            startX = e.clientX;
+            slider.style.cursor = 'grabbing';
+        });
+        
+        slider.addEventListener('mousemove', function(e) {
+            if (!isMouseDown) return;
+            moveX = e.clientX;
+        });
+        
+        slider.addEventListener('mouseup', function(e) {
+            if (!isMouseDown || !startX || !moveX) {
+                isMouseDown = false;
+                slider.style.cursor = 'grab';
+                return;
+            }
+            
+            const diffX = startX - moveX;
+            const threshold = 50;
+            
+            if (Math.abs(diffX) > threshold) {
+                if (diffX > 0) {
+                    nextSlide();
+                } else {
+                    prevSlide();
+                }
+            }
+            
+            isMouseDown = false;
+            startX = null;
+            moveX = null;
+            slider.style.cursor = 'grab';
+        });
+        
+        slider.addEventListener('mouseleave', function() {
+            if (isMouseDown) {
+                isMouseDown = false;
+                slider.style.cursor = 'grab';
+            }
+        });
         
         // Set up the slider
         function updateSlider() {
@@ -509,7 +590,24 @@
         });
         
         // Auto-advance slides every 5 seconds
-        setInterval(nextSlide, 5000);
+        let slideInterval = setInterval(nextSlide, 5000);
+        
+        // 停止自动播放当用户交互时
+        slider.addEventListener('mouseenter', () => {
+            clearInterval(slideInterval);
+        });
+        
+        slider.addEventListener('mouseleave', () => {
+            slideInterval = setInterval(nextSlide, 5000);
+        });
+        
+        slider.addEventListener('touchstart', () => {
+            clearInterval(slideInterval);
+        });
+        
+        slider.addEventListener('touchend', () => {
+            slideInterval = setInterval(nextSlide, 5000);
+        });
         
         // Contact form submission
         const contactForm = document.querySelector('.contact-form form');
@@ -543,15 +641,106 @@
 
         // 语言切换功能
         const languageLinks = document.querySelectorAll('.language-dropdown a');
+        const languageSelector = document.querySelector('.language-selector');
+        
+        // 添加语言选择器的点击事件（移动端优化）
+        if(languageSelector) {
+            const languageSelectorLink = languageSelector.querySelector('a');
+            languageSelectorLink.addEventListener('click', function(e) {
+                // 在移动端上阻止默认行为，以显示下拉菜单
+                if(window.innerWidth <= 768) {
+                    e.preventDefault();
+                    languageSelector.classList.toggle('active');
+                }
+            });
+        }
+        
         languageLinks.forEach(link => {
             link.addEventListener('click', function(e) {
-                // 不再阻止默认行为，允许链接跳转
+                // 不阻止默认行为，允许链接跳转
                 // e.preventDefault();
-                // 
-                // 不再需要在这里更新显示的当前语言，因为会跳转到新页面
-                // 每个页面都有自己的当前语言标识
+                
+                // 移除active类
+                if(languageSelector) {
+                    languageSelector.classList.remove('active');
+                }
             });
         });
+        
+        // 点击页面其他区域关闭语言下拉菜单
+        document.addEventListener('click', function(e) {
+            if(languageSelector && !languageSelector.contains(e.target)) {
+                languageSelector.classList.remove('active');
+            }
+        });
+        
+        // 检测窗口大小变化，调整移动端优化
+        window.addEventListener('resize', function() {
+            if(window.innerWidth > 768 && languageSelector) {
+                languageSelector.classList.remove('active');
+            }
+        });
+        
+        // 回到顶部按钮功能
+        const backToTopButton = document.querySelector('.back-to-top');
+        
+        // 显示/隐藏回到顶部按钮
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.add('visible');
+            } else {
+                backToTopButton.classList.remove('visible');
+            }
+        });
+        
+        // 点击回到顶部
+        backToTopButton.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // 图片懒加载
+        document.addEventListener('DOMContentLoaded', function() {
+            // 获取所有图片
+            const images = document.querySelectorAll('img');
+            
+            // 创建IntersectionObserver实例
+            const imageObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    // 当图片进入视口
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        // 如果有data-src属性，将其设置为src
+                        if (img.dataset.src) {
+                            img.src = img.dataset.src;
+                        }
+                        // 添加loaded类以显示图片
+                        img.classList.add('loaded');
+                        // 图片已加载，不再观察
+                        observer.unobserve(img);
+                    }
+                });
+            });
+            
+            // 开始观察所有图片
+            images.forEach(img => {
+                // 确保所有图片都有loaded类（初始状态为透明）
+                if (!img.classList.contains('loaded')) {
+                    imageObserver.observe(img);
+                }
+            });
+        });
+        
+        // 提高移动端性能
+        // 检测是否为移动设备
+        const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+        
+        if (isMobile) {
+            // 减少动画和过渡效果，提高性能
+            document.body.classList.add('mobile-device');
+        }
     </script>
 </body>
 </html> 

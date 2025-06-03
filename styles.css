@@ -51,6 +51,13 @@ img {
     max-width: 100%;
     height: auto;
     display: block;
+    /* 添加图片懒加载渐显效果 */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+img.loaded {
+    opacity: 1;
 }
 
 a {
@@ -517,6 +524,10 @@ footer {
         align-items: center;
         padding-top: 40px;
         transition: left 0.3s ease;
+        z-index: 999;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        overflow-y: auto; /* 允许长菜单滚动 */
+        -webkit-overflow-scrolling: touch; /* 增强iOS滚动体验 */
     }
     
     nav ul.active {
@@ -525,6 +536,8 @@ footer {
     
     nav ul li {
         margin: 0 0 20px 0;
+        width: 100%;
+        text-align: center;
     }
     
     .hero {
@@ -552,6 +565,149 @@ footer {
     .contact-content {
         gap: 30px;
     }
+    
+    /* 改进轮播图在移动端的显示 */
+    .slider-container {
+        height: 60vh;
+        min-height: 300px; /* 确保在小屏幕上有足够的高度 */
+        margin-top: 60px;
+    }
+    
+    .slide-content {
+        padding: 15px;
+    }
+    
+    .slide-content h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+    
+    .slide-content p {
+        font-size: 14px;
+        margin-bottom: 15px;
+        padding: 0 10px;
+    }
+    
+    .slider-arrow {
+        width: 35px;
+        height: 35px;
+        font-size: 16px;
+        opacity: 0.8;
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+    
+    /* 添加移动端的触摸滑动功能样式 */
+    .slider {
+        cursor: grab;
+    }
+    
+    .slider:active {
+        cursor: grabbing;
+    }
+    
+    /* 减少移动端上不必要的动画和过渡，提高性能 */
+    .value-card:hover,
+    .team-member:hover,
+    .product-item:hover,
+    .case-study:hover {
+        transform: none;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    }
+    
+    /* 轻量级卡片交互 */
+    .value-card:active,
+    .team-member:active,
+    .product-item:active,
+    .case-study:active {
+        transform: scale(0.98);
+    }
+    
+    /* 简化轮播图导航按钮，更易于在移动端点击 */
+    .slider-arrow {
+        opacity: 0.8;
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+    
+    /* 改进产品卡片布局 */
+    .product-category {
+        padding: 20px 10px;
+    }
+    
+    .product-info {
+        padding: 15px 0;
+    }
+    
+    .product-info h3 {
+        font-size: 20px;
+    }
+    
+    /* 优化客户案例展示 */
+    .case-study {
+        margin-bottom: 25px;
+    }
+    
+    .case-study-content {
+        padding: 15px;
+    }
+    
+    .case-metrics {
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    
+    .metric {
+        width: 33%;
+        margin-bottom: 10px;
+    }
+    
+    /* 优化联系表单 */
+    .contact-form {
+        width: 100%;
+    }
+    
+    .form-group {
+        margin-bottom: 15px;
+    }
+    
+    .form-group input,
+    .form-group textarea {
+        padding: 10px 12px;
+        font-size: 14px;
+    }
+    
+    /* 语言选择器优化 */
+    .language-selector {
+        margin: 10px 0;
+        width: 100%;
+    }
+    
+    .language-selector > a {
+        justify-content: center;
+        padding: 10px;
+        border-top: 1px solid var(--medium-gray);
+    }
+    
+    .language-dropdown {
+        position: static;
+        display: none;
+        box-shadow: none;
+        padding: 10px 0;
+        background-color: var(--light-gray);
+        width: 100%;
+    }
+    
+    .language-selector:hover .language-dropdown,
+    .language-selector.active .language-dropdown {
+        display: block;
+    }
+    
+    .language-dropdown li {
+        text-align: center;
+    }
+    
+    .language-dropdown li a {
+        padding: 8px 0;
+    }
 }
 
 @media (max-width: 480px) {
@@ -561,24 +717,115 @@ footer {
     
     .btn {
         padding: 10px 20px;
-    font-size: 12px;
+        font-size: 12px;
     }
     
     .section-header {
-        margin-bottom: 30px;
+        margin-bottom: 25px;
     }
     
     .section-header h2 {
         font-size: 22px;
+        padding-bottom: 10px;
+    }
+    
+    .section-header p {
+        font-size: 14px;
     }
     
     .product-category {
-        padding: 20px;
+        padding: 15px 10px;
     }
     
     .footer-content {
         flex-direction: column;
-        gap: 30px;
+        gap: 25px;
+        text-align: center;
+    }
+    
+    .footer-links ul {
+        justify-content: center;
+    }
+    
+    .social-icons {
+        justify-content: center;
+    }
+    
+    /* 极小屏幕优化 */
+    .slider-container {
+        height: 50vh;
+    }
+    
+    .slide-content h2 {
+        font-size: 20px;
+    }
+    
+    .slide-content p {
+        font-size: 12px;
+        margin-bottom: 10px;
+    }
+    
+    .slide-content .btn {
+        padding: 8px 15px;
+        font-size: 11px;
+    }
+    
+    .slider-controls {
+        bottom: 10px;
+    }
+    
+    .slider-dot {
+        width: 8px;
+        height: 8px;
+        margin: 0 3px;
+    }
+    
+    /* 优化商业价值区块 */
+    .value-card {
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+    
+    .value-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+    
+    .value-card h3 {
+        font-size: 18px;
+        margin-bottom: 8px;
+    }
+    
+    .value-card p {
+        font-size: 13px;
+    }
+    
+    /* 优化联系区块 */
+    .contact-item {
+        margin-bottom: 15px;
+    }
+    
+    .contact-item i {
+        width: 35px;
+        height: 35px;
+        font-size: 16px;
+    }
+}
+
+/* 触摸设备优化 */
+@media (hover: none) {
+    .btn:hover {
+        transform: none;
+    }
+    
+    .language-selector:hover .language-dropdown {
+        display: none;
+    }
+    
+    .language-selector.active .language-dropdown {
+        display: block;
     }
 }
 
@@ -2019,5 +2266,177 @@ footer {
     
     .language-dropdown li {
         margin-bottom: 10px;
+    }
+}
+
+/* 回到顶部按钮 */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 99;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.back-to-top:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-3px);
+}
+
+/* 适应折叠屏和旋转屏幕 */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+    .slider-container {
+        height: 85vh; /* 横屏时调整轮播图高度 */
+    }
+    
+    nav ul {
+        height: 85vh;
+        padding-top: 20px;
+    }
+    
+    nav ul li {
+        margin-bottom: 10px;
+    }
+}
+
+/* 打印样式优化 */
+@media print {
+    header, 
+    footer, 
+    .slider-controls,
+    .slider-arrow,
+    .mobile-menu-btn,
+    .back-to-top {
+        display: none !important;
+    }
+    
+    body {
+        color: #000;
+        background: #fff;
+    }
+    
+    .container {
+        width: 100%;
+        max-width: none;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .about, 
+    .products, 
+    .contact {
+        page-break-inside: avoid;
+    }
+    
+    a {
+        color: #000;
+        text-decoration: underline;
+    }
+    
+    .product-category {
+        page-break-inside: avoid;
+        break-inside: avoid;
+    }
+}
+
+/* 移动设备特别优化 */
+.mobile-device {
+    /* 减少页面动画效果 */
+    --transition-speed: 0.2s;
+}
+
+.mobile-device .slider-container,
+.mobile-device .slider,
+.mobile-device .slide-content,
+.mobile-device .product-category,
+.mobile-device .about-content,
+.mobile-device .value-card,
+.mobile-device .testimonial-card,
+.mobile-device .case-study {
+    transition: all var(--transition-speed) ease !important;
+}
+
+.mobile-device .btn:hover,
+.mobile-device a:hover {
+    transform: none !important;
+}
+
+/* 增强移动端点击区域 */
+.mobile-device .btn,
+.mobile-device nav ul li a,
+.mobile-device .slider-dot,
+.mobile-device .slider-arrow,
+.mobile-device .footer-links a,
+.mobile-device .social-icons a,
+.mobile-device .back-to-top {
+    padding: 12px !important; /* 增大点击区域 */
+    min-height: 44px; /* iOS推荐的最小点击高度 */
+    min-width: 44px; /* iOS推荐的最小点击宽度 */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 移动端表单优化 */
+.mobile-device input,
+.mobile-device textarea,
+.mobile-device select,
+.mobile-device button {
+    font-size: 16px !important; /* 防止iOS自动缩放 */
+}
+
+/* 禁用长按弹出菜单（提高响应速度） */
+.mobile-device img,
+.mobile-device a {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+/* 增强页面滚动性能 */
+.mobile-device {
+    -webkit-overflow-scrolling: touch; /* 流畅滚动 */
+    scroll-behavior: smooth; /* 平滑滚动 */
+}
+
+/* 优化移动端页面内容间距 */
+@media (max-width: 480px) {
+    section {
+        padding: 40px 0 !important;
+    }
+    
+    .container {
+        padding: 0 15px;
+    }
+    
+    p {
+        margin-bottom: 10px;
+    }
+    
+    h2 {
+        margin-bottom: 12px;
+    }
+    
+    .btn {
+        margin-top: 5px;
+        margin-bottom: 5px;
     }
 } 
