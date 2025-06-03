@@ -8,6 +8,45 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="icon" href="https://img.icons8.com/fluency/48/brewery.png" type="image/png">
     <meta name="description" content="Massa - Leading manufacturer of professional brewing and extraction equipment for commercial use, including craft beer brewing systems, cold brew coffee equipment, and cold water extraction systems.">
+    <style>
+        /* 图片加载占位符和错误处理 */
+        img {
+            background-color: #f0f0f0;
+            position: relative;
+        }
+        
+        /* 删除伪元素，这些可能导致图片不显示 */
+        /*
+        img::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #f0f0f0;
+            border: 1px solid #e0e0e0;
+        }
+        
+        img::after {
+            content: attr(alt) " 图片加载中...";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            padding: 8px;
+            background-color: rgba(0,0,0,0.5);
+            color: white;
+            font-size: 14px;
+            text-align: center;
+        }
+        */
+        
+        img.error::after {
+            content: "⚠️ " attr(alt) " 图片加载失败";
+            background-color: rgba(255,0,0,0.5);
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -42,27 +81,27 @@
     <div class="slider-container">
         <div class="slider">
             <div class="slide">
-                <img src="images/slider/craft-beer-equipment.jpg" alt="Craft Beer Equipment" class="slide-image">
+                <img src="images/slider/craft-beer-equipment.jpg" alt="Craft Beer Equipment" class="slide-image" width="1500" height="800" fetchpriority="high">
                 <div class="slide-content">
                     <h2>Craft Beer Brewing Equipment</h2>
-                    <p>Maximize your ROI with our professional brewing systems. Engineered for efficiency, durability, and consistent quality that drives customer loyalty and revenue growth.</p>
-                    <a href="pages/products.html" class="btn">Explore Our Solutions</a>
+                    <p>Maximize your return on investment with our professional brewing systems, designed for efficiency, durability, and consistent quality that drives customer loyalty and revenue growth.</p>
+                    <a href="pages/products.html" class="btn">Explore Solutions</a>
                 </div>
             </div>
             <div class="slide">
-                <img src="images/slider/cold-brew-coffee.jpg" alt="Cold Brew Coffee Equipment" class="slide-image">
+                <img src="images/slider/cold-brew-coffee.jpg" alt="Cold Brew Coffee Equipment" class="slide-image" width="1500" height="800" loading="lazy">
                 <div class="slide-content">
                     <h2>Cold Brew Coffee Equipment</h2>
-                    <p>Increase production capacity by up to 300% with our commercial-grade systems. Reduce labor costs and enhance product consistency with automated extraction technology.</p>
-                    <a href="pages/products.html" class="btn">Discover Our Systems</a>
+                    <p>Increase production capacity by up to 300% with automated extraction technology that reduces labor costs and improves product consistency.</p>
+                    <a href="pages/products.html" class="btn">Discover Systems</a>
                 </div>
             </div>
             <div class="slide">
-                <img src="images/slider/extraction-system.jpg" alt="Cold Water Extraction Systems" class="slide-image">
+                <img src="images/slider/extraction-system.jpg" alt="Cold Water Extraction Systems" class="slide-image" width="1500" height="800" loading="lazy">
                 <div class="slide-content">
                     <h2>Cold Water Extraction Systems</h2>
-                    <p>Achieve superior yield rates and product purity with our advanced extraction technology. Fully customizable systems with comprehensive training and lifetime technical support.</p>
-                    <a href="pages/products.html" class="btn">View Our Technology</a>
+                    <p>Achieve superior yields and product purity with our advanced extraction technology. Fully customizable systems with comprehensive training and lifetime technical support.</p>
+                    <a href="pages/products.html" class="btn">View Technology</a>
                 </div>
             </div>
         </div>
@@ -92,7 +131,7 @@
                     <a href="pages/about.html" class="btn">Learn More About Us</a>
                 </div>
                 <div class="about-image">
-                    <img src="images/about/production-facility.jpg" alt="Massa Production Facility">
+                    <img src="images/about/production-facility.jpg" alt="Massa Production Facility" width="1000" height="600" loading="lazy">
                 </div>
             </div>
         </div>
@@ -107,7 +146,7 @@
             <div class="product-categories">
                 <div class="product-category">
                     <div class="product-image">
-                        <img src="images/products/craft-beer-equipment.jpg" alt="Craft Beer Brewing Equipment">
+                        <img src="images/products/craft-beer-equipment.jpg" alt="Craft Beer Brewing Equipment" width="1000" height="600" loading="lazy">
                     </div>
                     <div class="product-info">
                         <h3>Craft Beer Brewing Equipment</h3>
@@ -125,7 +164,7 @@
 
                 <div class="product-category">
                     <div class="product-image">
-                        <img src="images/products/cold-brew-equipment.jpg" alt="Cold Brew Coffee Equipment">
+                        <img src="images/products/cold-brew-equipment.jpg" alt="Cold Brew Coffee Equipment" width="1000" height="600" loading="lazy">
                     </div>
                     <div class="product-info">
                         <h3>Cold Brew Coffee Equipment</h3>
@@ -143,7 +182,7 @@
 
                 <div class="product-category">
                     <div class="product-image">
-                        <img src="images/products/extraction-system.jpg" alt="Cold Water Extraction Systems">
+                        <img src="images/products/extraction-system.jpg" alt="Cold Water Extraction Systems" width="1000" height="600" loading="lazy">
                     </div>
                     <div class="product-info">
                         <h3>Cold Water Extraction Systems</h3>
@@ -226,7 +265,7 @@
                         <p>"Massa's brewing equipment has revolutionized our production process. The quality and consistency of our beer has improved dramatically, and their support team has been exceptional throughout the entire process."</p>
                     </div>
                     <div class="testimonial-author">
-                        <img src="images/testimonials/john-roberts.jpg" alt="John Roberts">
+                        <img src="images/testimonials/john-roberts.jpg" alt="John Roberts" width="100" height="100" loading="lazy">
                         <div>
                             <h4>John Roberts</h4>
                             <p>Master Brewer, Urban Craft Brewery</p>
@@ -239,7 +278,7 @@
                         <p>"We've tried several cold brew systems before finding Massa. Their equipment provides the perfect extraction every time, and the efficiency has allowed us to scale our production while maintaining the highest quality standards."</p>
                     </div>
                     <div class="testimonial-author">
-                        <img src="images/testimonials/sarah-chen.jpg" alt="Sarah Chen">
+                        <img src="images/testimonials/sarah-chen.jpg" alt="Sarah Chen" width="100" height="100" loading="lazy">
                         <div>
                             <h4>Sarah Chen</h4>
                             <p>Operations Director, Cold Brew Co.</p>
@@ -252,7 +291,7 @@
                         <p>"The custom extraction system Massa designed for our facility has exceeded our expectations. The precision and control it offers have allowed us to develop unique products that set us apart in the market."</p>
                     </div>
                     <div class="testimonial-author">
-                        <img src="images/testimonials/michael-torres.jpg" alt="Michael Torres">
+                        <img src="images/testimonials/michael-torres.jpg" alt="Michael Torres" width="100" height="100" loading="lazy">
                         <div>
                             <h4>Michael Torres</h4>
                             <p>CEO, Botanical Extracts Inc.</p>
@@ -265,7 +304,7 @@
                         <p>"Massa's cold brew process is revolutionary. The multi-stage filtration system and precise temperature control result in a consistently exceptional product that our customers can't get enough of."</p>
                     </div>
                     <div class="testimonial-author">
-                        <img src="images/testimonials/emily-wong.jpg" alt="Emily Wong">
+                        <img src="images/testimonials/emily-wong.jpg" alt="Emily Wong" width="100" height="100" loading="lazy">
                         <div>
                             <h4>Emily Wong</h4>
                             <p>Head Roaster, Premium Coffee Co.</p>
@@ -701,34 +740,41 @@
             });
         });
         
-        // 图片懒加载
+        // 图片加载错误处理
         document.addEventListener('DOMContentLoaded', function() {
-            // 获取所有图片
             const images = document.querySelectorAll('img');
             
-            // 创建IntersectionObserver实例
-            const imageObserver = new IntersectionObserver((entries, observer) => {
-                entries.forEach(entry => {
-                    // 当图片进入视口
-                    if (entry.isIntersecting) {
-                        const img = entry.target;
-                        // 如果有data-src属性，将其设置为src
-                        if (img.dataset.src) {
-                            img.src = img.dataset.src;
-                        }
-                        // 添加loaded类以显示图片
-                        img.classList.add('loaded');
-                        // 图片已加载，不再观察
-                        observer.unobserve(img);
+            images.forEach(img => {
+                // 确保图片默认可见
+                img.style.opacity = '1';
+                
+                // 图片加载成功时添加loaded类
+                img.addEventListener('load', function() {
+                    this.classList.add('loaded');
+                    console.log('Image loaded successfully:', this.src);
+                });
+                
+                // 图片加载失败时添加error类
+                img.addEventListener('error', function() {
+                    this.classList.add('error');
+                    console.error('Image failed to load:', this.src);
+                    
+                    // 尝试使用备用图片
+                    if (!this.src.includes('sample-image')) {
+                        const originalSrc = this.src;
+                        this.src = 'images/sample-image.html?bg=1a3c6e&color=ffffff&title=' + 
+                                  encodeURIComponent(this.alt) + '&subtitle=Image Not Available';
+                        console.log('Attempting to load backup for:', originalSrc);
                     }
                 });
-            });
-            
-            // 开始观察所有图片
-            images.forEach(img => {
-                // 确保所有图片都有loaded类（初始状态为透明）
-                if (!img.classList.contains('loaded')) {
-                    imageObserver.observe(img);
+                
+                // 对已经加载完成或失败的图片立即触发相应事件
+                if (img.complete) {
+                    if (img.naturalHeight === 0) {
+                        img.dispatchEvent(new Event('error'));
+                    } else {
+                        img.dispatchEvent(new Event('load'));
+                    }
                 }
             });
         });

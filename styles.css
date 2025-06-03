@@ -52,12 +52,55 @@ img {
     height: auto;
     display: block;
     /* 添加图片懒加载渐显效果 */
-    opacity: 0;
+    opacity: 1; /* 修改为默认显示 */
     transition: opacity 0.3s ease;
+    background-color: #f0f0f0;
+    position: relative;
 }
 
 img.loaded {
     opacity: 1;
+}
+
+img.error {
+    position: relative;
+    min-height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+}
+
+/* 产品图片占位符 */
+.product-image img:not(.loaded) {
+    min-height: 200px;
+    background-image: linear-gradient(45deg, #f0f0f0 25%, #e0e0e0 25%, #e0e0e0 50%, #f0f0f0 50%, #f0f0f0 75%, #e0e0e0 75%);
+    background-size: 20px 20px;
+    animation: loading-gradient 2s linear infinite;
+}
+
+@keyframes loading-gradient {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 40px 0;
+    }
+}
+
+/* 确保轮播图有适当的占位符 */
+.slide-image:not(.loaded) {
+    min-height: 300px;
+    background-color: #1a3c6e;
+}
+
+/* 缩略图和头像的占位符 */
+.testimonial-author img:not(.loaded) {
+    border-radius: 50%;
+    min-width: 60px;
+    min-height: 60px;
+    background-color: #e0e0e0;
 }
 
 a {
